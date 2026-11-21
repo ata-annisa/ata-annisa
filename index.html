@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ata Annisa’i Azka | Portofolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FDE8DF;--grid:#F7D7C8;--ink:#7D3B24;--ink2:#A15C43;--sky:#F5C2C0;--apr:#F8C99B;--blue:#BCC6DC;--w:#fff;--sh:3px 3px 0 var(--ink);color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 12px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:28px 28px;color:var(--ink);font:400 16px/1.6 "Plus Jakarta Sans",sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+h1,h2,h3,.mono,button,input,textarea,.tab{font-family:"Space Mono",monospace}
+h1,h2,h3{margin:0;line-height:1.2}
+.wrap{max-width:1040px;margin:0 auto;padding:0 18px}
+section{padding:44px 0}
+h2{font-size:clamp(22px,4vw,30px);margin-bottom:20px}
+.win{background:var(--w);border:2px solid var(--ink);border-radius:14px;box-shadow:var(--sh);overflow:hidden}
+.bar{display:flex;align-items:center;gap:8px;padding:8px 10px;background:var(--blue);border-bottom:2px solid var(--ink);font:700 13px "Space Mono",monospace}
+.bar .x{margin-left:auto}
+.btn{font-weight:700;font-size:14px;color:var(--ink);background:var(--apr);border:2px solid var(--ink);border-radius:10px;padding:8px 14px;box-shadow:var(--sh);cursor:pointer;text-decoration:none;display:inline-block;transition:transform .12s,box-shadow .12s}
+.btn:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}
+.btn:active{transform:translate(3px,3px);box-shadow:0 0 0 var(--ink)}
+.btn.blue{background:var(--blue)}.btn.sm{padding:5px 10px;font-size:12px}
+.btn:focus-visible,input:focus-visible,textarea:focus-visible,.tab:focus-visible,nav a:focus-visible{outline:3px solid var(--ink2);outline-offset:2px}
+.x{width:24px;height:24px;border:2px solid var(--ink);border-radius:50%;background:var(--sky);color:var(--ink);font:700 12px/1 "Space Mono",monospace;cursor:pointer;padding:0}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;padding:10px 0;display:flex;justify-content:flex-end;padding-right:6%}
+nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:4px;background:var(--w);border:2px solid var(--ink);border-radius:999px;box-shadow:var(--sh);overflow-x:auto;max-width:100%}
+nav a{display:block;padding:5px 12px;border-radius:999px;color:var(--ink);text-decoration:none;font:700 13px "Space Mono",monospace;transition:transform .12s;white-space:nowrap}
+nav a:hover{transform:translateY(-2px);background:var(--bg)}
+nav a.on{background:var(--apr)}
+/* hero */
+.chrome{display:flex;align-items:center;gap:8px;background:var(--blue);padding:8px 10px;border-bottom:2px solid var(--ink);flex-wrap:wrap}
+.tabx{background:var(--w);border:2px solid var(--ink);border-radius:8px 8px 0 0;padding:2px 10px;font:700 12px "Space Mono",monospace}
+.nv{display:flex;gap:4px}.nv span{width:26px;height:26px;border:2px solid var(--ink);border-radius:8px;background:var(--w);display:grid;place-items:center;font-size:13px}
+.addr{flex:1;min-width:140px;background:var(--w);border:2px solid var(--ink);border-radius:999px;padding:2px 12px;font:400 13px "Space Mono",monospace}
+.sky{position:relative;background:var(--sky);padding:36px 24px 28px;min-height:360px;display:grid;grid-template-columns:1.3fr 1fr;gap:20px;align-items:center}
+.sky svg.deco{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.sky>*{position:relative}
+.hero-t{background:var(--w);border:2px solid var(--ink);border-radius:16px;box-shadow:var(--sh);padding:20px}
+.hero-t h1{font-size:clamp(26px,5vw,40px);margin-bottom:8px}
+.hero-t p{margin:0 0 16px;color:var(--ink2)}
+.av{justify-self:center;width:min(220px,60vw);aspect-ratio:1;background:var(--w);border:2px solid var(--ink);border-radius:50%;box-shadow:var(--sh);overflow:hidden}
+.av img{width:100%;height:100%;object-fit:contain;transform:scale(1.38);display:block}
+.twinkle{animation:tw 2.4s ease-in-out infinite}@keyframes tw{50%{opacity:.35}}
+/* about */
+.about{display:grid;grid-template-columns:1fr 1.2fr;gap:22px;align-items:start}
+.dlg{padding:0}.dlg .body{padding:18px}
+.dlg .row{display:flex;gap:12px;margin-top:14px;flex-wrap:wrap}
+#more{display:none;margin-top:14px;padding:12px;background:var(--bg);border:2px dashed var(--ink);border-radius:10px;font-size:14px}
+#more.open{display:block}
+.docs{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:12px}
+.doc{background:var(--w);border:2px solid var(--ink);border-radius:12px;box-shadow:var(--sh);padding:12px 8px;text-align:center;cursor:pointer;font-family:"Space Mono",monospace;font-size:12px;font-weight:700}
+.doc i{display:grid;place-items:center;width:46px;height:56px;margin:0 auto 6px;background:var(--bg);border:2px solid var(--ink);border-radius:4px 14px 4px 4px;font:700 18px "Space Mono",monospace;font-style:normal}
+.doc.sel{background:var(--apr)}
+#stack-out{margin-top:14px;font-size:14px;color:var(--ink2);min-height:24px}
+/* projects */
+.card .body p {
+  text-align: justify;
+  hyphens: auto;
+}
+.tools{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:16px;align-items:center}
+.search{flex:1;min-width:220px;display:flex;border:2px solid var(--ink);border-radius:999px;background:var(--w);box-shadow:var(--sh);overflow:hidden}
+.search input{flex:1;border:0;padding:9px 16px;font-size:14px;background:transparent;color:var(--ink);min-width:0}
+.search span{width:48px;background:var(--blue);border-left:2px solid var(--ink);display:grid;place-items:center}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tab{border:2px solid var(--ink);background:var(--w);color:var(--ink);border-radius:10px 10px 0 0;padding:5px 12px;font-size:12px;font-weight:700;cursor:pointer}
+.tab.on{background:var(--apr)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:20px}
+.card .ph{height:130px;background:var(--apr);border-bottom:2px solid var(--ink);display:grid;place-items:center;position:relative}
+.card{display:flex;flex-direction:column}.card .bar,.card .ph{flex:none}
+.card .ph{display:block;height:190px;overflow:hidden}
+.trk{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.trk::-webkit-scrollbar{display:none}
+.trk>*{flex:0 0 100%;scroll-snap-align:center;width:100%;height:100%;object-fit:cover}
+.slide{display:grid;place-items:center;font-size:44px}
+.ph .nav{position:absolute;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;border:2px solid var(--ink);background:var(--w);color:var(--ink);font:700 18px/1 "Space Mono",monospace;cursor:pointer;padding:0;box-shadow:2px 2px 0 var(--ink)}
+.ph .nav.l{left:8px}.ph .nav.r{right:8px}
+.card .body{padding:14px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:16px}.card p{margin:0;font-size:14px;color:var(--ink2);flex:1}
+.badges{display:flex;gap:6px;flex-wrap:wrap}
+.badge{font:700 11px "Space Mono",monospace;background:var(--blue);border:2px solid var(--ink);border-radius:999px;padding:1px 9px}
+.acts{display:flex;gap:8px;flex-wrap:wrap}
+.empty{grid-column:1/-1;text-align:center;padding:30px;background:var(--w);border:2px dashed var(--ink);border-radius:14px}
+/* certs */
+.cert{padding:16px;position:relative}
+.cert .star{position:absolute;right:-6px;top:-14px;width:46px;height:46px;background:var(--apr);border:2px solid var(--ink);border-radius:50% 50% 50% 6px;display:grid;place-items:center;font-size:20px}
+.hearts{color:var(--ink);letter-spacing:3px;margin:6px 0}
+.cert{margin-top:12px}
+/* contact */
+.social-cols{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end}
+.scol{display:flex;flex-direction:column;align-items:center;gap:10px}
+.scol a:first-child{height:56px;display:grid;place-items:center;transition:transform .12s;text-decoration:none}
+.scol a:first-child:hover{transform:translateY(-3px)}
+.scol .btn{text-align:center}
+footer{text-align:center;padding:26px 18px;color:var(--ink2);font:400 13px "Space Mono",monospace}
+footer p{margin:4px 0;overflow-wrap:anywhere}footer a{color:var(--ink);font-weight:700}footer a:hover{background:var(--apr)}
+#toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);transform:translate(-50%,30px);opacity:0;background:var(--w);border:2px solid var(--ink);border-radius:12px;box-shadow:var(--sh);padding:8px 16px;font:700 13px "Space Mono",monospace;transition:.25s;z-index:70;pointer-events:none;max-width:90vw}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:760px){.sky,.about{grid-template-columns:1fr}nav{padding-right:12px}.av{order:-1;width:150px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav aria-label="Menu utama"><ul id="menu">
+<li><a href="#home" class="on">Home</a></li><li><a href="#about">About</a></li><li><a href="#projects">Projects</a></li><li><a href="#certs">Certificates</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+
+<main class="wrap">
+<section id="home" style="padding-top:14px">
+<div class="win" id="heroWin">
+<div class="chrome"><span class="tabx">ata-annisa.dev</span><button class="x" aria-label="Tutup tab" id="closeTab">x</button>
+<div class="nv" aria-hidden="true"><span>&larr;</span><span>&rarr;</span><span>&#8635;</span><span>&#8962;</span></div>
+<div class="addr mono">https://ata-annisa.dev</div><span aria-hidden="true" style="font-size:18px">&#9733;</span></div>
+<div class="sky">
+<svg class="deco" viewBox="0 0 800 360" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<circle cx="700" cy="60" r="26" fill="#F8C99B" stroke="#7D3B24" stroke-width="2"/>
+<g fill="#fff" stroke="#7D3B24" stroke-width="2"><path d="M60 110a22 22 0 0 1 40-12a26 26 0 0 1 48 8a18 18 0 0 1-6 34H72a18 18 0 0 1-12-30z"/><path d="M560 300a20 20 0 0 1 36-10a24 24 0 0 1 44 8a16 16 0 0 1-6 30H570a16 16 0 0 1-10-28z"/></g>
+<g fill="#fff" stroke="#7D3B24" stroke-width="1.5" class="twinkle"><path d="M420 40l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/><path d="M760 200l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/><path d="M300 320l3 8 8 3-8 3-3 8-3-8-8-3 8-3z"/></g></svg>
+<div class="hero-t">
+<h1>Halo, aku Ata.</h1>
+<p style="text-align: justify;">Mahasiswa S1 Teknik Informatika semester 5 di Universitas Negeri Surabaya (UNESA). Membangun aplikasi web full-stack, dengan minat di application security: autentikasi, pengelolaan akses, dan analisis kerentanan.</p>
+<div class="acts"><a class="btn" href="#projects">Lihat proyek</a> <a class="btn blue" href="#contact">Hubungi aku</a></div></div>
+<div class="av"><img src="ata.png" alt="Foto Ata Annisa’i Azka"><rect width="100" height="100" fill="#F5C2C0"/><path d="M18 100c0-26 14-38 32-38s32 12 32 38z" fill="#BCC6DC" stroke="#7D3B24" stroke-width="2"/><circle cx="50" cy="44" r="25" fill="#FDE8DF" stroke="#7D3B24" stroke-width="2"/><path d="M24 42c2-22 18-28 30-26 14 0 22 12 22 26-8-8-16-12-26-12s-18 4-26 12z" fill="#7D3B24"/><circle cx="41" cy="48" r="2.6" fill="#7D3B24"/><circle cx="59" cy="48" r="2.6" fill="#7D3B24"/><ellipse cx="35" cy="55" rx="5" ry="3" fill="#F5C2C0"/><ellipse cx="65" cy="55" rx="5" ry="3" fill="#F5C2C0"/><path d="M45 57q5 5 10 0" fill="none" stroke="#7D3B24" stroke-width="2" stroke-linecap="round"/></svg></div>
+</div></div>
+</section>
+
+<section id="about">
+<h2>About & tech stack</h2>
+<div class="about">
+<div class="win dlg"><div class="bar">about-me.txt<button class="x" id="dlgX" aria-label="Tutup dialog">x</button></div>
+<div class="body"><h3>do you want to know more?</h3>
+<div class="row"><button class="btn" id="yes">YES</button><button class="btn blue" id="no">NO</button></div>
+<div id="more" style="text-align: justify;"><p style="margin:0 0 8px">Mahasiswa S1 Teknik Informatika yang memiliki pengalaman dalam pengembangan aplikasi web dan pemahaman  backend development, database, jaringan komputer, dan keamanan informasi. Memiliki ketertarikan pada pengembangan sistem berbasis web dan application security, khususnya autentikasi, pengelolaan akses, dan analisis kerentanan.
+</p><p style="margin:0 0 2px"><b>Pendidikan:</b></p>
+<ul style="margin:0 0 10px;padding-left:18px;line-height:1.35">
+  <li style="margin-bottom:2px">UNESA, S1 Teknik Informatika (semester 5, 2024 sampai sekarang)</li>
+  <li>MAN 2 Lamongan, MIPA (2021 sampai 2024)</li>
+</ul><p style="margin:0 0 2px;line-height:1.35"><b>Pengalaman:</b></p>
+<p style="margin:0 0 4px;padding-left:10px;line-height:1.35">Bendahara Panitia LDK PPPM BM (2025)</p>
+<ul style="margin:0 0 10px;padding-left:25px;line-height:1.35">
+  <li style="margin-bottom:2px">Merencanakan, mengelola, serta memantau anggaran biaya selama kegiatan LDK.</li>
+  <li>Berkoordinasi dengan seluruh divisi kepanitiaan yang berjumlah 39 dalam memverifikasi pengajuan dana serta validasi bukti pembayaran kebutuhan acara dengan 40+ peserta.</li>
+</ul><p style="margin:0 0 10px"><b>Bahasa:</b> Indonesia (native), Inggris (intermediate).</p><a class="btn sm" href="CV_ AtaAnnisai.pdf">Lihat CV ATS</a></div></div></div>
+<div><div class="docs" id="docs"></div><div id="stack-out" role="status">Klik salah satu ikon untuk lihat detail keahliannya.</div></div>
+</div></section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="tools"><div class="search"><input id="q" type="search" placeholder="cari proyek atau teknologi..." aria-label="Cari proyek"><span aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#7D3B24" stroke-width="2.4" stroke-linecap="round"><circle cx="8" cy="8" r="5.5"/><path d="M12.5 12.5L18 18"/></svg></span></div>
+<div class="tabs" id="tabs" role="tablist"></div></div>
+<div class="grid" id="grid" aria-live="polite"></div>
+</section>
+
+<section id="certs"><h2>Certificates & training</h2><div class="grid" id="certGrid"></div></section>
+
+<section id="contact">
+  <h2>Contact & socials</h2>
+  <div class="social-cols">
+    <!-- Kolom 1: Email -->
+    <div class="scol">
+      <a class="mail" href="https://mail.google.com/mail/?view=cm&fs=1&to=ataannisa26@gmail.com" target="_blank" rel="noopener" aria-label="Email Ata">
+        <svg width="64" height="56" viewBox="0 0 72 56">
+          <rect x="2" y="6" width="68" height="46" rx="8" fill="#fff" stroke="#7D3B24" stroke-width="2"/>
+          <path d="M4 10l32 24L68 10" fill="none" stroke="#7D3B24" stroke-width="2"/>
+        </svg>
+      </a>
+      <a class="btn" style="width: fit-content;" href="https://mail.google.com/mail/?view=cm&fs=1&to=ataannisa26@gmail.com" target="_blank" rel="noopener">Email</a>
+    </div>
+
+    <!-- Kolom 2: WhatsApp -->
+    <div class="scol">
+      <a href="https://wa.me/6285854428468" target="_blank" rel="noopener" aria-label="WhatsApp Ata">
+        <svg width="56" height="56" viewBox="0 0 56 56">
+          <circle cx="28" cy="28" r="25" fill="#F5C2C0" stroke="#7D3B24" stroke-width="2"/>
+          <path d="M28 14a13 13 0 0 0-11.2 19.6L15 41l7.6-1.8A13 13 0 1 0 28 14z" fill="#fff" stroke="#7D3B24" stroke-width="2" stroke-linejoin="round"/>
+          <path d="M23.5 22.5c.4-.8.9-.8 1.4-.8h1c.3 0 .7.1.9.6l1.1 2.6c.2.4.1.8-.2 1.1l-.8.9c.8 1.5 2 2.7 3.5 3.5l.9-.8c.3-.3.7-.4 1.1-.2l2.6 1.1c.5.2.6.6.6.9v1c0 .5 0 1-.8 1.4-1 .5-3.2.8-6.2-.7-3-1.5-5.3-4.3-6.2-6.2-1.5-3-1.2-5.2-.7-6.2z" fill="#7D3B24"/>
+        </svg>
+      </a>
+      <a class="btn blue" style="width: fit-content;" href="https://wa.me/6285854428468" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+
+    <!-- Kolom 3: LinkedIn -->
+    <div class="scol">
+      <a href="https://linkedin.com/in/ata-annisai-azka" target="_blank" rel="noopener" aria-label="LinkedIn Ata">
+        <svg width="56" height="56" viewBox="0 0 56 56">
+          <rect x="3" y="3" width="50" height="50" rx="12" fill="#BCC6DC" stroke="#7D3B24" stroke-width="2"/>
+          <circle cx="19" cy="19" r="2.6" fill="#7D3B24"/>
+          <path d="M19 25v14M26 39V25m0 5c0-3.5 3-5 5.5-5S37 26.5 37 30v9" fill="none" stroke="#7D3B24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a class="btn" style="width: fit-content;" href="https://linkedin.com/in/ata-annisai-azka" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+
+    <!-- Kolom 4: GitHub -->
+    <div class="scol">
+      <a href="https://github.com/ata-annisa" target="_blank" rel="noopener" aria-label="GitHub Ata">
+        <svg width="56" height="56" viewBox="0 0 56 56">
+          <circle cx="28" cy="28" r="25" fill="#fff" stroke="#7D3B24" stroke-width="2"/>
+          <path d="M23 44v-5.5c0-1.5.5-2.6 1.3-3.2-4.4-.5-9-2.2-9-9.8 0-2.2.8-4 2-5.4-.2-.5-.9-2.5.2-5.3 0 0 1.7-.5 5.5 2a19 19 0 0 1 10 0c3.8-2.5 5.5-2 5.5-2 1.1 2.8.4 4.8.2 5.3 1.3 1.4 2 3.2 2 5.4 0 7.6-4.6 9.3-9 9.8.8.7 1.4 2 1.4 4v5.5" fill="none" stroke="#7D3B24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M23 40c-4.5 1.4-4.5-2.2-6.3-2.7" fill="none" stroke="#7D3B24" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </a>
+      <a class="btn blue" style="width: fit-content;" href="https://github.com/ata-annisa" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer><p>&copy; 2026 Ata Annisa’i Azka. Dibuat dengan matcha dan donat.</p></footer>
+<div id="toast" role="status"></div>
+
+<script>
+var $=function(s){return document.querySelector(s)};
+var toastEl=$("#toast"),tt;
+function toast(m){toastEl.textContent=m;toastEl.classList.add("show");clearTimeout(tt);tt=setTimeout(function(){toastEl.classList.remove("show")},2400)}
+var stack = [
+  ["Programming & Web Dev", "HTML, CSS, JavaScript, PHP, Python, C++, React (Vite), Vue 3, Node.js, Express, Laravel, Tailwind CSS, Bootstrap."],
+  ["Cybersecurity", "CIA Triad, Risk Management, Risk Assessment, Vulnerability Analysis."],
+  ["Networking", "TCP/IP, OSI Model, Static Routing, IP Subnetting."],
+  ["Database", "MySQL, PostgreSQL, MongoDB, Prisma."],
+  ["Cloud & DevOps", "AWS (EC2, S3, RDS), Cloud Architecture, Docker."],
+  ["Tools", "Git, GitHub, VS Code, Postman, Figma, Wireshark, Cisco Packet Tracer."]
+];
+$("#docs").innerHTML=stack.map(function(s,i){return '<button class="doc" data-i="'+i+'" style="font:inherit;color:inherit"><i>Aa</i>'+s[0]+'</button>'}).join("");
+$("#docs").addEventListener("click",function(e){var b=e.target.closest(".doc");if(!b)return;document.querySelectorAll(".doc").forEach(function(d){d.classList.remove("sel")});b.classList.add("sel");var s=stack[b.dataset.i];$("#stack-out").textContent=s[0]+": "+s[1]})
+$("#yes").onclick=function(){$("#more").classList.add("open");toast("Siap, ini versi lengkapnya.")};
+$("#no").onclick=function(){$("#more").classList.remove("open");toast("Oke, santai saja.")};
+$("#dlgX").onclick=function(){var m=$("#more");if(m.classList.contains("open")){m.classList.remove("open");toast("Dialog ditutup. Klik YES untuk buka lagi.")}else toast("Buka dialognya terlebih dahulu, lalu gunakan tombol ini untuk menutup dialognya.")};
+var P=[
+{t:"Gutarik Kue",c:"web",w:"Oktober 2026",d:"Mengembangkan full-stack platform toko roti online yang memiliki tiga role-based interfaces: Admin, Seller, dan Customer. Mengimplementasikan REST API untuk pengelolaan produk, proses checkout multi-vendor, pemrosesan pesanan, dan pelacakan transaksi. Menerapkan keamanan aplikasi melalui autentikasi JWT menggunakan httpOnly cookies, pengelolaan hak akses berbasis peran, token invalidation, dan validasi input menggunakan Zod.",s:["Vue 3", "Vite", "Node.js", "Express.js", "Prisma ORM", "PostgreSQL", "JWT", "Zod", "Docker"],e:"&#127856;",
+img: ["gutarik1.jpeg","gutarik2.jpeg","gutarik3.jpeg","gutarik4.jpeg","gutarik5.jpeg","gutarik6.jpeg"],
+repo:"https://github.com/ata-annisa/gutarik_kue_project"},
+{t:"CNC Energy Monitor IOT",c:"iot",w:"Oktober 2026",d:"Mengembangkan sistem monitoring berbasis IoT untuk memantau konsumsi energi dan kondisi operasional mesin CNC. Mengintegrasikan mikrokontroler ESP32 dengan sensor tegangan dan arus untuk mengumpulkan data kelistrikan secara real-time. Mengembangkan dashboard web untuk menampilkan tegangan, arus, daya, dan konsumsi energi, termasuk estimasi biaya listrik serta notifikasi ketika penggunaan energi melebihi batas yang ditentukan.",s:["ESP32","ACS712","ZMPT101B","IoT","Web Dashboard"],e:"&#129489;",
+img: ["cnc1.jpg","cnc2.jpg","cnc3.jpg","cnc4.jpg"],
+repo:"https://github.com/ata-annisa/energy-monitor-IOT"},
+{t:"SimLab RPL",c:"web",w:"Mei 2026",d:"Berkontribusi dalam pengembangan aplikasi manajemen laboratorium berbasis web, mencakup sisi frontend dan backend. Mempelajari penerapan autentikasi API menggunakan Laravel Sanctum dan pengelolaan akses berdasarkan peran pengguna.",s:["Laravel","Vue.js","MySQL","Laravel Sanctum"],e:"&#128300;",
+img: ["simlab1.jpeg","simlab2.jpeg","simlab3.jpeg","simlab4.jpeg","simlab5.jpeg","simlab7.jpeg","simlab8.jpeg"],
+repo:"https://github.com/ata-annisa/simlab_rpl"},
+{t:"E-Commerce Toko Stiker",c:"web",w:"Mei 2026",d:"Berkontribusi dalam pengembangan aplikasi e-commerce, baik pada sisi frontend maupun backend. Mempelajari alur pengembangan aplikasi transaksi online dan integrasi payment gateway.",s:["Next.js","React","TypeScript","Prisma ORM","MySQL","NextAuth.js","Midtrans"],e:"&#127775;",
+img: ["kwu1.jpeg","kwu2.jpeg","kwu3.jpeg","kwu4.jpeg","kwu5.jpeg"],
+repo:"https://github.com/ata-annisa/kwu_tugas"},
+{t:"Circuit Netlist Extractor",c:"iot",w:"Mei 2026",d:"Mengembangkan aplikasi berbasis web untuk mendeteksi komponen elektronik dan mengekstrak koneksi rangkaian listrik dari gambar skema secara otomatis. Mengimplementasikan pipeline pemrosesan citra yang mencakup image preprocessing, deteksi node, klasifikasi komponen, dan identifikasi koneksi antarkomponen. Mengembangkan mekanisme generasi netlist berformat SPICE (.sp) yang dapat digunakan untuk simulasi rangkaian melalui LTspice, serta menyediakan antarmuka web dan CLI untuk pemrosesan gambar.",s:["Python","Flask","OpenCV","Image Processing","JavaScript"],e:"&#9889;",
+img: ["citra1.jpeg","citra2.jpeg","citra3.jpeg","citra4.jpeg","citra5.jpeg","citra6.jpeg"],
+repo:"https://github.com/ata-annisa/circuit-netlist-extractor"}];
+var cat=["all","web","iot"],cur="all";
+$("#tabs").innerHTML=cat.map(function(c){return '<button class="tab'+(c=="all"?" on":"")+'" role="tab" data-c="'+c+'">'+(c=="all"?"Semua":c=="web"?"Web":"Citra & IOT")+'</button>'}).join("");
+function draw(){var q=$("#q").value.toLowerCase().trim();
+var r=P.filter(function(p){return(cur=="all"||p.c==cur)&&(p.t+" "+p.d+" "+p.s.join(" ")).toLowerCase().indexOf(q)>-1});
+$("#grid").innerHTML=r.length?r.map(function(p){var im=(p.img||[]);return '<article class="win card"><div class="bar">'+p.t+'<button class="x" aria-label="Tutup kartu" data-toast="Hanya hiasan. Kartu tetap di sini.">x</button></div><div class="ph"><div class="trk">'+(im.length?im.map(function(u){return '<img src="'+u+'" alt="'+p.t+'" loading="lazy">'}).join(""):'<div class="slide">'+p.e+'</div>')+'</div>'+(im.length>1?'<button class="nav l" data-d="-1" aria-label="Gambar sebelumnya">&lsaquo;</button><button class="nav r" data-d="1" aria-label="Gambar berikutnya">&rsaquo;</button>':'')+'</div><div class="body"><h3>'+p.t+'</h3>'+(p.w?'<span class="mono" style="font-size:12px;color:var(--ink2)">'+p.w+'</span>':'')+'<p>'+p.d+'</p><div class="badges">'+p.s.map(function(b){return '<span class="badge">'+b+'</span>'}).join("")+'</div><div class="acts">'+(p.repo?'<a class="btn sm" href="'+p.repo+'" target="_blank" rel="noopener">GitHub Repo</a>':'<a class="btn" href="#" data-toast="Repo bersifat privat.">GitHub Repo</a>')+'</div></div></article>'}).join(""):'<div class="empty"><h3>Tidak ada proyek cocok</h3><p style="margin:6px 0 0;color:var(--ink2)">Coba kata kunci lain atau pilih tab Semua.</p></div>'}
+$("#q").oninput=draw;
+$("#grid").addEventListener("click",function(e){var b=e.target.closest(".nav");if(!b)return;var t=b.parentNode.querySelector(".trk");t.scrollBy({left:b.dataset.d*t.clientWidth,behavior:"smooth"})});
+$("#tabs").onclick=function(e){var b=e.target.closest(".tab");if(!b)return;cur=b.dataset.c;document.querySelectorAll(".tab").forEach(function(t){t.classList.toggle("on",t==b)});draw()};
+draw();
+var C=[["AWS Job Role in the Cloud","AWS","2026","AWS_jobroleinthecloud.pdf"],["AWS Cloud Practitioner","AWS","2026","awscloudpractitioner.pdf"],["Gemini Certified Student (K12)","Google for Education","2026","sertif_gemini.pdf"],["Program Terapan Bidang TIK","Institut Teknologi Sepuluh Nopember &amp; MAN 2 Lamongan","2024","sertif_prodistik.jpeg"]];
+var C = [
+  ["AWS Job Role in the Cloud", "AWS", "2026", "AWS_jobroleinthecloud.pdf"],
+  ["AWS Cloud Practitioner", "AWS", "2026", "awscloudpractitioner.pdf"],
+  ["Gemini Certified Student (K12)", "Google for Education", "2026", "sertif_gemini.pdf"],
+  ["Program Terapan Bidang TIK", "Institut Teknologi Sepuluh Nopember &amp; MAN 2 Lamongan", "2024", "sertif_prodistik.jpeg"]
+];
+
+$("#certGrid").innerHTML = C.map(function(c) {
+  return '<article class="win cert">' +
+    '<span class="star" aria-hidden="true">&#9733;</span>' +
+    '<h3>' + c[0] + '</h3>' +
+    '<div class="hearts" aria-hidden="true">&#9829;&#9829;&#9829;</div>' +
+    '<p style="margin:0 0 12px;font-size:14px;color:var(--ink2)">' + c[1] + ', ' + c[2] + '</p>' +
+    '<a class="btn sm" href="' + c[3] + '" target="_blank" rel="noopener noreferrer">Lihat kredensial</a>' +
+  '</article>';
+}).join("");
+document.addEventListener("click",function(e){var a=e.target.closest("[data-toast]");if(a){e.preventDefault();toast(a.dataset.toast)}});
+$("#closeTab").onclick=function(){toast("Tab ata-annisa.dev tetap terbuka, tenang.")};
+var links=document.querySelectorAll("#menu a"),secs=["home","about","projects","certs","contact"];
+function spy(){var y=window.scrollY+140,cur=0;secs.forEach(function(id,i){if($("#"+id).offsetTop<=y)cur=i});links.forEach(function(l,i){l.classList.toggle("on",i==cur)})}
+window.addEventListener("scroll",spy,{passive:true});spy();
+</script>
+</body>
+</html>
