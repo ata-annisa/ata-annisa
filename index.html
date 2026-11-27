@@ -121,7 +121,7 @@ footer p{margin:4px 0;overflow-wrap:anywhere}footer a{color:var(--ink);font-weig
 <h1>Halo, aku Ata.</h1>
 <p style="text-align: justify;">Mahasiswa S1 Teknik Informatika semester 5 di Universitas Negeri Surabaya (UNESA). Membangun aplikasi web full-stack, dengan minat di application security: autentikasi, pengelolaan akses, dan analisis kerentanan.</p>
 <div class="acts"><a class="btn" href="#projects">Lihat proyek</a> <a class="btn blue" href="#contact">Hubungi aku</a></div></div>
-<div class="av"><img src="ata.png" alt="Foto Ata Annisa’i Azka"><rect width="100" height="100" fill="#F5C2C0"/><path d="M18 100c0-26 14-38 32-38s32 12 32 38z" fill="#BCC6DC" stroke="#7D3B24" stroke-width="2"/><circle cx="50" cy="44" r="25" fill="#FDE8DF" stroke="#7D3B24" stroke-width="2"/><path d="M24 42c2-22 18-28 30-26 14 0 22 12 22 26-8-8-16-12-26-12s-18 4-26 12z" fill="#7D3B24"/><circle cx="41" cy="48" r="2.6" fill="#7D3B24"/><circle cx="59" cy="48" r="2.6" fill="#7D3B24"/><ellipse cx="35" cy="55" rx="5" ry="3" fill="#F5C2C0"/><ellipse cx="65" cy="55" rx="5" ry="3" fill="#F5C2C0"/><path d="M45 57q5 5 10 0" fill="none" stroke="#7D3B24" stroke-width="2" stroke-linecap="round"/></svg></div>
+<div class="av"><img src="ata.png" alt="Foto Ata Annisa’i Azka"><circle cx="50" cy="44" r="25" fill="#FDE8DF" stroke="#7D3B24" stroke-width="2"/><path d="M24 42c2-22 18-28 30-26 14 0 22 12 22 26-8-8-16-12-26-12s-18 4-26 12z" fill="#7D3B24"/><circle cx="41" cy="48" r="2.6" fill="#7D3B24"/><circle cx="59" cy="48" r="2.6" fill="#7D3B24"/><ellipse cx="35" cy="55" rx="5" ry="3" fill="#F5C2C0"/><ellipse cx="65" cy="55" rx="5" ry="3" fill="#F5C2C0"/><path d="M45 57q5 5 10 0" fill="none" stroke="#7D3B24" stroke-width="2" stroke-linecap="round"/></div>
 </div></div>
 </section>
 
@@ -222,36 +222,81 @@ var stack = [
   ["Tools", "Git, GitHub, VS Code, Postman, Figma, Wireshark, Cisco Packet Tracer."]
 ];
 $("#docs").innerHTML=stack.map(function(s,i){return '<button class="doc" data-i="'+i+'" style="font:inherit;color:inherit"><i>Aa</i>'+s[0]+'</button>'}).join("");
-$("#docs").addEventListener("click",function(e){var b=e.target.closest(".doc");if(!b)return;document.querySelectorAll(".doc").forEach(function(d){d.classList.remove("sel")});b.classList.add("sel");var s=stack[b.dataset.i];$("#stack-out").textContent=s[0]+": "+s[1]})
+$("#docs").addEventListener("click",function(e){var b=e.target.closest(".doc");if(!b)return;document.querySelectorAll(".doc").forEach(function(d){d.classList.remove("sel")});b.classList.add("sel");var s=stack[b.dataset.i];$("#stack-out").textContent=s[0]+": "+s[1]});
 $("#yes").onclick=function(){$("#more").classList.add("open");toast("Siap, ini versi lengkapnya.")};
 $("#no").onclick=function(){$("#more").classList.remove("open");toast("Oke, santai saja.")};
 $("#dlgX").onclick=function(){var m=$("#more");if(m.classList.contains("open")){m.classList.remove("open");toast("Dialog ditutup. Klik YES untuk buka lagi.")}else toast("Buka dialognya terlebih dahulu, lalu gunakan tombol ini untuk menutup dialognya.")};
+
 var P=[
-{t:"Gutarik Kue",c:"web",w:"Oktober 2026",d:"Mengembangkan full-stack platform toko roti online yang memiliki tiga role-based interfaces: Admin, Seller, dan Customer. Mengimplementasikan REST API untuk pengelolaan produk, proses checkout multi-vendor, pemrosesan pesanan, dan pelacakan transaksi. Menerapkan keamanan aplikasi melalui autentikasi JWT menggunakan httpOnly cookies, pengelolaan hak akses berbasis peran, token invalidation, dan validasi input menggunakan Zod.",s:["Vue 3", "Vite", "Node.js", "Express.js", "Prisma ORM", "PostgreSQL", "JWT", "Zod", "Docker"],e:"&#127856;",
-img: ["gutarik1.jpeg","gutarik2.jpeg","gutarik3.jpeg","gutarik4.jpeg","gutarik5.jpeg","gutarik6.jpeg"],
-repo:"https://github.com/ata-annisa/gutarik_kue_project"},
-{t:"CNC Energy Monitor IOT",c:"iot",w:"Oktober 2026",d:"Mengembangkan sistem monitoring berbasis IoT untuk memantau konsumsi energi dan kondisi operasional mesin CNC. Mengintegrasikan mikrokontroler ESP32 dengan sensor tegangan dan arus untuk mengumpulkan data kelistrikan secara real-time. Mengembangkan dashboard web untuk menampilkan tegangan, arus, daya, dan konsumsi energi, termasuk estimasi biaya listrik serta notifikasi ketika penggunaan energi melebihi batas yang ditentukan.",s:["ESP32","ACS712","ZMPT101B","IoT","Web Dashboard"],e:"&#129489;",
-img: ["cnc1.jpg","cnc2.jpg","cnc3.jpg","cnc4.jpg"],
-repo:"https://github.com/ata-annisa/energy-monitor-IOT"},
-{t:"SimLab RPL",c:"web",w:"Mei 2026",d:"Berkontribusi dalam pengembangan aplikasi manajemen laboratorium berbasis web, mencakup sisi frontend dan backend. Mempelajari penerapan autentikasi API menggunakan Laravel Sanctum dan pengelolaan akses berdasarkan peran pengguna.",s:["Laravel","Vue.js","MySQL","Laravel Sanctum"],e:"&#128300;",
-img: ["simlab1.jpeg","simlab2.jpeg","simlab3.jpeg","simlab4.jpeg","simlab5.jpeg","simlab7.jpeg","simlab8.jpeg"],
-repo:"https://github.com/ata-annisa/simlab_rpl"},
-{t:"E-Commerce Toko Stiker",c:"web",w:"Mei 2026",d:"Berkontribusi dalam pengembangan aplikasi e-commerce, baik pada sisi frontend maupun backend. Mempelajari alur pengembangan aplikasi transaksi online dan integrasi payment gateway.",s:["Next.js","React","TypeScript","Prisma ORM","MySQL","NextAuth.js","Midtrans"],e:"&#127775;",
-img: ["kwu1.jpeg","kwu2.jpeg","kwu3.jpeg","kwu4.jpeg","kwu5.jpeg"],
-repo:"https://github.com/ata-annisa/kwu_tugas"},
-{t:"Circuit Netlist Extractor",c:"iot",w:"Mei 2026",d:"Mengembangkan aplikasi berbasis web untuk mendeteksi komponen elektronik dan mengekstrak koneksi rangkaian listrik dari gambar skema secara otomatis. Mengimplementasikan pipeline pemrosesan citra yang mencakup image preprocessing, deteksi node, klasifikasi komponen, dan identifikasi koneksi antarkomponen. Mengembangkan mekanisme generasi netlist berformat SPICE (.sp) yang dapat digunakan untuk simulasi rangkaian melalui LTspice, serta menyediakan antarmuka web dan CLI untuk pemrosesan gambar.",s:["Python","Flask","OpenCV","Image Processing","JavaScript"],e:"&#9889;",
-img: ["citra1.jpeg","citra2.jpeg","citra3.jpeg","citra4.jpeg","citra5.jpeg","citra6.jpeg"],
-repo:"https://github.com/ata-annisa/circuit-netlist-extractor"}];
-var cat=["all","web","iot"],cur="all";
-$("#tabs").innerHTML=cat.map(function(c){return '<button class="tab'+(c=="all"?" on":"")+'" role="tab" data-c="'+c+'">'+(c=="all"?"Semua":c=="web"?"Web":"Citra & IOT")+'</button>'}).join("");
-function draw(){var q=$("#q").value.toLowerCase().trim();
-var r=P.filter(function(p){return(cur=="all"||p.c==cur)&&(p.t+" "+p.d+" "+p.s.join(" ")).toLowerCase().indexOf(q)>-1});
-$("#grid").innerHTML=r.length?r.map(function(p){var im=(p.img||[]);return '<article class="win card"><div class="bar">'+p.t+'<button class="x" aria-label="Tutup kartu" data-toast="Hanya hiasan. Kartu tetap di sini.">x</button></div><div class="ph"><div class="trk">'+(im.length?im.map(function(u){return '<img src="'+u+'" alt="'+p.t+'" loading="lazy">'}).join(""):'<div class="slide">'+p.e+'</div>')+'</div>'+(im.length>1?'<button class="nav l" data-d="-1" aria-label="Gambar sebelumnya">&lsaquo;</button><button class="nav r" data-d="1" aria-label="Gambar berikutnya">&rsaquo;</button>':'')+'</div><div class="body"><h3>'+p.t+'</h3>'+(p.w?'<span class="mono" style="font-size:12px;color:var(--ink2)">'+p.w+'</span>':'')+'<p>'+p.d+'</p><div class="badges">'+p.s.map(function(b){return '<span class="badge">'+b+'</span>'}).join("")+'</div><div class="acts">'+(p.repo?'<a class="btn sm" href="'+p.repo+'" target="_blank" rel="noopener">GitHub Repo</a>':'<a class="btn" href="#" data-toast="Repo bersifat privat.">GitHub Repo</a>')+'</div></div></article>'}).join(""):'<div class="empty"><h3>Tidak ada proyek cocok</h3><p style="margin:6px 0 0;color:var(--ink2)">Coba kata kunci lain atau pilih tab Semua.</p></div>'}
+  {t:"Gutarik Kue",c:"web",w:"Oktober 2026",d:"Mengembangkan full-stack platform toko roti online yang memiliki tiga role-based interfaces: Admin, Seller, dan Customer. Mengimplementasikan REST API untuk pengelolaan produk, proses checkout multi-vendor, pemrosesan pesanan, dan pelacakan transaksi. Menerapkan keamanan aplikasi melalui autentikasi JWT menggunakan httpOnly cookies, pengelolaan hak akses berbasis peran, token invalidation, dan validasi input menggunakan Zod.",s:["Vue 3", "Vite", "Node.js", "Express.js", "Prisma ORM", "PostgreSQL", "JWT", "Zod", "Docker"],e:"&#127856;",
+  img: ["gutarik1.jpeg","gutarik2.jpeg","gutarik3.jpeg","gutarik4.jpeg","gutarik5.jpeg","gutarik6.jpeg"],
+  repo:"https://github.com/ata-annisa/gutarik_kue_project"},
+  {t:"CNC Energy Monitor IOT",c:"iot",w:"Oktober 2026",d:"Mengembangkan sistem monitoring berbasis IoT untuk memantau konsumsi energi dan kondisi operasional mesin CNC. Mengintegrasikan mikrokontroler ESP32 dengan sensor tegangan dan arus untuk mengumpulkan data kelistrikan secara real-time. Mengembangkan dashboard web untuk menampilkan tegangan, arus, daya, dan konsumsi energi, termasuk estimasi biaya listrik serta notifikasi ketika penggunaan energi melebihi batas yang ditentukan.",s:["ESP32","ACS712","ZMPT101B","IoT","Web Dashboard"],e:"&#129489;",
+  img: ["cnc1.jpg","cnc2.jpg","cnc3.jpg","cnc4.jpg"],
+  repo:"https://github.com/ata-annisa/energy-monitor-IOT"},
+  {t:"SimLab RPL",c:"web",w:"Mei 2026",d:"Berkontribusi dalam pengembangan aplikasi manajemen laboratorium berbasis web, mencakup sisi frontend dan backend. Mempelajari penerapan autentikasi API menggunakan Laravel Sanctum dan pengelolaan akses berdasarkan peran pengguna.",s:["Laravel","Vue.js","MySQL","Laravel Sanctum"],e:"&#128300;",
+  img: ["simlab1.jpeg","simlab2.jpeg","simlab3.jpeg","simlab4.jpeg","simlab5.jpeg","simlab7.jpeg","simlab8.jpeg"],
+  repo:"https://github.com/ata-annisa/simlab_rpl"},
+  {
+    t: "Beau – Hotel Reservation UI/UX",
+    c: "uiux",
+    w: "Januari 2025",
+    d: "Merancang desain antarmuka dan pengalaman pengguna (UI/UX) aplikasi mobile reservasi hotel menggunakan metode Design Thinking. Melakukan riset pengguna melalui wawancara terstruktur, menyusun user persona serta affinity diagram, merancang user flow, wireframe low-fidelity, hingga prototipe interaktif high-fidelity di Figma dan melaksanakan usability testing.",
+    s: ["Figma", "UI/UX Design", "Design Thinking", "User Research", "Wireframing", "Prototyping"],
+    e: "&#127976;",
+    img: ["beau1.jpeg","beau2.jpeg","beau3.jpeg","beau4.jpeg","beau5.jpeg","beau6.jpeg"],
+    docs: [
+      { label: "Figma Prototype", url: "https://www.figma.com/design/BFSyd7NVpfbWh2Ft3YdnL8/Beau?node-id=0-1&t=2MRl0gKxdmX9hTi9-1", primary: true },
+      { label: "User Research & Persona", url: "UserResearchAndPersona.pdf" },
+      { label: "Low-Fi & Page Flow", url: "LowFiPrototypeAndPageFlow.pdf" },
+      { label: "Design Thinking & Testing", url: "DesignThinkingAndTesting.pdf" }
+    ]
+  },
+  {t:"E-Commerce Toko Stiker",c:"web",w:"Mei 2026",d:"Berkontribusi dalam pengembangan aplikasi e-commerce, baik pada sisi frontend maupun backend. Mempelajari alur pengembangan aplikasi transaksi online dan integrasi payment gateway.",s:["Next.js","React","TypeScript","Prisma ORM","MySQL","NextAuth.js","Midtrans"],e:"&#127775;",
+  img: ["kwu1.jpeg","kwu2.jpeg","kwu3.jpeg","kwu4.jpeg","kwu5.jpeg"],
+  repo:"https://github.com/ata-annisa/kwu_tugas"},
+  {t:"Circuit Netlist Extractor",c:"iot",w:"Mei 2026",d:"Mengembangkan aplikasi berbasis web untuk mendeteksi komponen elektronik dan mengekstrak koneksi rangkaian listrik dari gambar skema secara otomatis. Mengimplementasikan pipeline pemrosesan citra yang mencakup image preprocessing, deteksi node, klasifikasi komponen, dan identifikasi koneksi antarkomponen. Mengembangkan mekanisme generasi netlist berformat SPICE (.sp) yang dapat digunakan untuk simulasi rangkaian melalui LTspice, serta menyediakan antarmuka web dan CLI untuk pemrosesan gambar.",s:["Python","Flask","OpenCV","Image Processing","JavaScript"],e:"&#9889;",
+  img: ["citra1.jpeg","citra2.jpeg","citra3.jpeg","citra4.jpeg","citra5.jpeg","citra6.jpeg"],
+  repo:"https://github.com/ata-annisa/circuit-netlist-extractor"}
+];
+
+var cat=["all","web","iot","uiux"],cur="all";
+var tabNames={all:"Semua",web:"Web",iot:"Citra & IoT",uiux:"UI/UX"};
+$("#tabs").innerHTML=cat.map(function(c){return '<button class="tab'+(c=="all"?" on":"")+'" role="tab" data-c="'+c+'">'+tabNames[c]+'</button>'}).join("");
+
+function draw(){
+  var q=$("#q").value.toLowerCase().trim();
+  var r=P.filter(function(p){return(cur=="all"||p.c==cur)&&(p.t+" "+p.d+" "+p.s.join(" ")).toLowerCase().indexOf(q)>-1});
+  $("#grid").innerHTML=r.length?r.map(function(p){
+    var im=(p.img||[]);
+    return '<article class="win card">' +
+      '<div class="bar">'+p.t+'<button class="x" aria-label="Tutup kartu" data-toast="Hanya hiasan. Kartu tetap di sini.">x</button></div>' +
+      '<div class="ph"><div class="trk">'+(im.length?im.map(function(u){return '<img src="'+u+'" alt="'+p.t+'" loading="lazy">'}).join(""):'<div class="slide">'+p.e+'</div>')+'</div>'+(im.length>1?'<button class="nav l" data-d="-1" aria-label="Gambar sebelumnya">&lsaquo;</button><button class="nav r" data-d="1" aria-label="Gambar berikutnya">&rsaquo;</button>':'')+'</div>' +
+      '<div class="body">' +
+        '<h3>'+p.t+'</h3>' +
+        (p.w?'<span class="mono" style="font-size:12px;color:var(--ink2)">'+p.w+'</span>':'') +
+        '<p>'+p.d+'</p>' +
+        '<div class="badges">'+p.s.map(function(b){return '<span class="badge">'+b+'</span>'}).join("")+'</div>' +
+        '<div class="acts">' +
+          (p.docs
+            ? p.docs.map(function(doc){
+                return '<a class="btn sm" href="' + doc.url + '" target="_blank" rel="noopener">' + doc.label + '</a>';
+              }).join("")
+            : (p.repo
+                ? '<a class="btn sm" href="' + p.repo + '" target="_blank" rel="noopener">GitHub Repo</a>'
+                : '<a class="btn sm blue" href="#" data-toast="Repo bersifat privat.">GitHub Repo</a>')
+          ) +
+        '</div>' +
+      '</div>' +
+    '</article>';
+  }).join(""):'<div class="empty"><h3>Tidak ada proyek cocok</h3><p style="margin:6px 0 0;color:var(--ink2)">Coba kata kunci lain atau pilih tab Semua.</p></div>';
+}
+
 $("#q").oninput=draw;
 $("#grid").addEventListener("click",function(e){var b=e.target.closest(".nav");if(!b)return;var t=b.parentNode.querySelector(".trk");t.scrollBy({left:b.dataset.d*t.clientWidth,behavior:"smooth"})});
 $("#tabs").onclick=function(e){var b=e.target.closest(".tab");if(!b)return;cur=b.dataset.c;document.querySelectorAll(".tab").forEach(function(t){t.classList.toggle("on",t==b)});draw()};
 draw();
-var C=[["AWS Job Role in the Cloud","AWS","2026","AWS_jobroleinthecloud.pdf"],["AWS Cloud Practitioner","AWS","2026","awscloudpractitioner.pdf"],["Gemini Certified Student (K12)","Google for Education","2026","sertif_gemini.pdf"],["Program Terapan Bidang TIK","Institut Teknologi Sepuluh Nopember &amp; MAN 2 Lamongan","2024","sertif_prodistik.jpeg"]];
+
 var C = [
   ["AWS Job Role in the Cloud", "AWS", "2026", "AWS_jobroleinthecloud.pdf"],
   ["AWS Cloud Practitioner", "AWS", "2026", "awscloudpractitioner.pdf"],
@@ -268,6 +313,7 @@ $("#certGrid").innerHTML = C.map(function(c) {
     '<a class="btn sm" href="' + c[3] + '" target="_blank" rel="noopener noreferrer">Lihat kredensial</a>' +
   '</article>';
 }).join("");
+
 document.addEventListener("click",function(e){var a=e.target.closest("[data-toast]");if(a){e.preventDefault();toast(a.dataset.toast)}});
 $("#closeTab").onclick=function(){toast("Tab ata-annisa.dev tetap terbuka, tenang.")};
 var links=document.querySelectorAll("#menu a"),secs=["home","about","projects","certs","contact"];
